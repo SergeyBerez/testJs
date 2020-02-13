@@ -1,5 +1,4 @@
 window.addEventListener('load', function(e) {
-  const circless = document.getElementsByClassName('circle');
   const btnStart = document.querySelector('.btn-start');
   const btnRandom = document.querySelector('.btn-random');
   const conteiner = document.querySelector('.conteiner');
@@ -14,10 +13,8 @@ window.addEventListener('load', function(e) {
   // запускаем функцию setInterval , для очистки интервала возвращаемое значение таймера зписываем в массив , по клику на кнопку, через дата атрибуты очищаем интервал
 
   function startRandomLigting() {
-    console.log(this);
+    //проверяем состояние кнопки и получаем в номера таймера который записан в массиве
     if (this.dataset.id == 1) {
-      // console.log("one");
-      // console.log(count);
       this.dataset.id = 0;
       for (let i = 0; i < count.length; i++) {
         console.log(count[i]);
@@ -25,9 +22,8 @@ window.addEventListener('load', function(e) {
         btnStart.textContent = 'start';
       }
     } else {
-      // console.log("two");
-      // console.log(count);
-      let timerId = setInterval(addColorCircle, 1000);
+      // получаем Id функции и сохраняем его в массив что бы потом очитсить интервал
+      let timerId = setInterval(addColorCircle, 2000);
       count.push(timerId);
       this.dataset.id = 1;
       btnStart.textContent = 'stop';
@@ -35,15 +31,16 @@ window.addEventListener('load', function(e) {
 
     // setInterval запусткает функию раскрашиваня шариков
     let i = 0;
-
     function addColorCircle() {
-      let Arrcircles = [...circless];
+      let Arrcircles = [...document.querySelectorAll('.circle')];
       Arrcircles.forEach(el => {
-        if (i > arrColor.length) {
-          i = 0;
-        }
+        
         el.style.backgroundColor = arrColor[i];
         i++;
+        console.log(i);
+        if (i > arrColor.length - 1) {
+          i = 0;
+        }
       });
     }
   }
