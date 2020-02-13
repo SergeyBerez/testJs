@@ -1,0 +1,97 @@
+.wrap-slider {
+  padding: 20px;
+  margin: auto;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 0px 5px rgba(70, 68, 68, 0.479);
+}
+
+.slider {
+  max-width: 800px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.slides {
+  min-width: 250px;
+  background-color: rgba(137, 43, 226, 0.233);
+  transition: 0.9s ease-in-out;
+
+  font-size: 30px;
+  text-align: center;
+}
+
+.slides img {
+  margin: 0 auto;
+  display: block;
+  max-width: 200px;
+}
+
+.pos-right {
+  position: absolute;
+  transform: translate(200%);
+  /* opacity: 0;
+  z-index: -1; */
+}
+
+.controls {
+  text-align: center;
+}
+
+.input {
+  display: none;
+}
+
+#circle1:checked ~ .label1,
+#circle2:checked ~ .label2,
+#circle3:checked ~ .label3,
+#circle4:checked ~ .label4 {
+  background: rgb(22, 21, 21);
+}
+
+label {
+  display: inline-block;
+  margin: 10px;
+  border: 3px solid rgb(145, 132, 132);
+  border-radius: 50%;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.btn-prev {
+  width: 40px;
+  height: 28px;
+  cursor: pointer;
+  background-image: url('../img/arrow_left.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  position: absolute;
+  top: 45%;
+  right: 100%;
+  outline: none;
+}
+
+.btn-next {
+  width: 40px;
+  height: 28px;
+  cursor: pointer;
+  background-image: url('../img/arrow_right.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  position: absolute;
+  top: 45%;
+  left: 100%;
+  outline: none;
+}

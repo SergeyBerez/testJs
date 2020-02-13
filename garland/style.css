@@ -1,0 +1,78 @@
+body {
+  overflow: hidden;
+}
+
+.conteiner {
+  position: relative;
+  overflow: hidden;
+  top: 100px;
+ 
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* .conteiner::before {
+ 
+  position: absolute;
+  top: -130px;
+  left: 120px;
+  content: "";
+  width: 300px;
+  height: 700px;
+  background: #fff;
+  transform: rotate(45deg);
+} */
+
+.circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rebeccapurple;
+}
+
+.button {
+  position: absolute;
+  display: block;
+  outline: none;
+  font-size: 20px;
+  color: rgb(248, 210, 159);
+  text-shadow: 1px 1px 5px black;
+  text-align: center;
+  padding: 5px;
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid rgb(109, 105, 105);
+  background: rgb(146, 148, 153);
+  /* box-shadow: 1px 1px 5px rgb(156, 153, 153); */
+  transition: 0.2s;
+  cursor: pointer;
+}
+.btn-start {
+  top: 100px;
+  left: 100px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.btn-random {
+  top: 100px;
+  left: 0;
+  right: 100px;
+  bottom: 0;
+  margin: auto;
+}
+
+.button:hover {
+  box-shadow: 7px 7px 6px 1px rgb(105, 103, 103);
+}
+
+.button:active {
+  box-shadow: 1px 1px 1px rgb(105, 103, 103);
+}
+
+.active {
+  background: rgb(9, 55, 172);
+}
